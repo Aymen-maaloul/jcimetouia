@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+video{
+    margin-left: 3%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .Eventstitle{
+    text-align: center;
+    font-weight: 100;
+    margin-top: 5%;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    text-align: center;
+    color: #C59C42;
+    text-decoration: underline;
+     font-weight: 400;
+  }
+  .events{
+    width:  100%;
+    height: 100%;
+  }
+  .div{
+    display: flex;
+  }
+.divevents{
+display: flex;
+margin-left: 6%;
+width: 100%;
+  }
+  .divevents>p{
+    margin-left: 5%;
+    width: 40%;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 8%;
+    color: #888888;
+  }
+
+.butn1{
+  background-color: rgba(86, 189, 163, 0.71);
+  color: white;
+  border: none;
+  width: 130px;
+  height: 35px;
+  border-radius: 10px;
+}
+.btn{
+  margin-left: 17%;
+  margin-top: 3%;
+  
+}
+.butn2{
+  background-color: rgba(86, 189, 163, 0.3);
+  color: white;
+  border: none;
+  width: 130px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 40px;
+}
+.divs{
+width: 100%;
+margin-top: 5%;
+height: 400px;
+display: flex;
+  flex-wrap: wrap;
+}
+.div1,.div2,.div3,.div4,.div5{
+  width: 22%;
+  margin-bottom: 5%;
+  height: 70%;
+  margin-top: 2%;
+ background: url("../public/assest/conf.png"); 
+  background-size: 100%;
+  margin-left: 50px;
+  background-repeat: no-repeat;
+  
+}
+.div2{
+  width: 22%;
+  margin-bottom: 5%;
+  height: 70%;
+  margin-top: 2%;
+ background: url("../public/assest/assise.jpg"); 
+  background-size: 100%;
+  margin-left: 50px;
+    background-repeat: no-repeat;
+  
+}
+.div1,.div4{
+  margin-left: 15%;
+  margin-top: -8%;
+}
+.div5{
+  margin-top: -8%;
+}
+.div1{
+  background: url("../public/assest/rnp2.jpg");
+  width: 22%;
+  margin-bottom: 5%;
+  height: 70%;
+  margin-top: 2%;
+  
+  background-size: 100%;
+  
+  margin-left: 15%;
+  background-repeat: no-repeat;
+}
+.rnp2btn{
+  width: 100%;
+  background: transparent; /* Initial background */
+  height: 63%;
+  background-position: bottom;
+  border: none;
+  transition: opacity 0.2s ease-in; /* Transition effect for opacity */
+  opacity: 0;/* Transition effect for background */
+
+}
+.rnp2btn>p{
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Saira ExtraCondensed',sans-serif;
+  margin-top: 39%;
+  margin-left: 2px;
+}
+.rnp2btn:hover {
+  opacity: 1;
+  background: linear-gradient(to top, black, transparent); 
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;/* Gradient background on hover */
+}
+.assisebtn{
+  width: 100%;
+  background: transparent; /* Initial background */
+  height: 67.5%;
+  background-position: bottom;
+  border: none;
+  transition: opacity 0.2s ease-in; /* Transition effect for opacity */
+  opacity: 0;/* Transition effect for background */
+
+}
+.assisebtn>p{
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Saira ExtraCondensed',sans-serif;
+  margin-top: 39%;
+  margin-left: 2px;
+}
+.assisebtn:hover {
+  opacity: 1;
+  background: linear-gradient(to top, black, transparent); 
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;/* Gradient background on hover */
+}
+.confbtn{
+  width: 100%;
+  background: transparent; /* Initial background */
+  height: 67.5%;
+  background-position: bottom;
+  border: none;
+  transition: opacity 0.2s ease-in; /* Transition effect for opacity */
+  opacity: 0;/* Transition effect for background */
+
+}
+.confbtn>p{
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Saira ExtraCondensed',sans-serif;
+  margin-top: 39%;
+  margin-left: 2px;
+}
+.confbtn:hover {
+  opacity: 1;
+  background: linear-gradient(to top, black, transparent); 
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;/* Gradient background on hover */
+}
+.div1>img{
+  width: 50%;
+  margin-top: 8%;
+  margin-left: 5%;
+}
+
+
+
+@media (max-width: 576px) {
+  .events{
+    
+  }
+  .Eventstitle{
+      font-size: 28px;
+      text-decoration: none;
+    
+  }
+  .div,.divevents{
+    width: 100%;
+  }
+
+  .btn{
+    width: 300px;
+    margin-left: 12%;
+
+  }
+  .butn2{
+    margin-left: 2%;
+  }
+  .divevents{
+    display: grid;
+  }
+  video{
+    width: 90%;
+  }
+  .divevents>p{
+    font-size: 14px;
+    width: 85%;
+  }
+  .divs{
+    display: grid;
+  }
+  .div1,.div2,.div3,.div4,.div5{
+    width: 70%;
+    margin-bottom: 1%;
+    height:70%;
+    margin-top: 2%;
+    background-size: 100%;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    
+  }
+  .div5{
+    height: 100%;
+  }
+  .div2{
+    margin-bottom: 5%;
+    height: 70%;
+    margin-top: 2%;
+   background: url("../public/assest/assise.jpg"); 
+    background-size: 100%;
+    margin-left: 50px;
+      background-repeat: no-repeat;
+    
+  }
+  .div1,.div4{
+  }
+  .div5{
+    margin-top: -8%;
+  }
+  .div1{
+
+    margin-bottom: 5%;
+    height: 70%;
+    margin-top: 2%;
+    
+    background-size: 100%;
+    
+    margin-left: 15%;
+    background-repeat: no-repeat;
+  }
+}

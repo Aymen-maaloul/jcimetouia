@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  video{
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 7%;
+  }
+  .abouttitle{
+
+    text-align: center;
+    color: #C59C42;
+    text-decoration: underline;
+     font-weight: 400;
+     font-family: 'TT Chocolates Trl',sans-serif;
+  }
+  .aboutus{
+    width:  100%;
+    height: 100%;
+  }
+  .div{
+    display: flex;
+  }
+.divabout{
+display: flex;
+margin-left: 6%;
+width: 100%;
+  }
+.descrp{
+    margin-left: 2%;
+    width: 80%;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 5%;
+    color: #5A5A5A;
+  }
+  .icon2{
+    display: grid;
+    margin-left: 6%;
+    margin-top: 5%;
+  }
+  .icon2>a{
+    margin-top: 1%;
+  }
+  .divabout>div{
+    margin-left: 5%;
+    width: 50%;
+    margin-top: 3%;
+  }
+  .titre{
+    color: #555555;
+    font-size: 28px;
+  }
+.aboutimg{
+    height: 85%;
+    margin-left: 3.5%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  .cred-li {
+    list-style-type: none;
+    margin-left: 30px; 
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #5A5A5A;
+    position: relative;
+    padding-left: 25px; /* Adjust the padding to make room for the custom bullet */
+    margin-left: 0; /* Adjusted margin */
+}
+.croy{
+  color: #5A5A5A;
+  font-size: 28px;
+}
+.credo{ 
+  margin-left: 14%;
+  width: 91%;
+  height: 60%;}
+.cred-div{
+  width: 100%;
+ padding-bottom: 10%;
+}
+.bur-title{
+  color:#5A5A5A;
+  font-size: 96px;
+}
+.malek-img2{
+  width: 25%;
+  margin-top: -2%;
+}
+.bure-img{
+  margin-top: 3%;
+}
+.gradient-dividero {
+  height: 2px;
+  width: 66%; /* Equivalent to 2/3 width */
+  margin: 20px auto; /* Center the divider horizontally with vertical margin */
+  background: linear-gradient(90deg, rgba(169,117,241,0) 0%, rgb(221, 233, 255) 48%, rgba(169,117,241,0) 99%);
+  margin-top: 5%;
+}
+.gradient-divider {
+  height: 2px;
+  width: 66%; /* Equivalent to 2/3 width */
+  margin: 20px auto; /* Center the divider horizontally with vertical margin */
+  background: linear-gradient(90deg, rgba(169,117,241,0) 0%, rgb(221, 233, 255) 48%, rgba(169,117,241,0) 99%);
+
+}
+.div-cred{
+  display: flex;
+  margin-top: 5%;
+}
+.cred-li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px; /* Adjust the width for the desired disc size */
+    height: 4px; /* Adjust the height for the desired disc size */
+    background-color: #5A5A5A; /* Bullet color */
+    border-radius: 50%; /* Make it a circle */
+}
+.malek-img{
+  width: 30%;
+  height: 22%;
+  border-radius: 20px;
+  margin-right: 7%;
+  margin-top: 3.5%;
+}
+/* Flexbox for ul to align items */
+.cred {
+    display: grid;
+    margin-top: 5%;
+     /* Add right margin to avoid overflow */
+    width: auto; /* Ensure ul doesn't expand unnecessarily */
+}
+
+
+
+
+
+
+@media (max-width: 576px) {
+  .divabout>p{
+    margin-left: 2%;
+    width: 85%;
+    background-color: #555555;
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 15%;
+    color: #ffffff;
+  }
+  .descrp{
+    width: 100%;
+    font-size: 15px;
+  }
+  .divabout{
+    display: grid;
+  }
+ 
+  .aboutus{
+    width:  100%;
+    height: 200%;
+  }
+  .abouttitle{
+    font-size: 28px;
+    text-decoration: none;
+  }
+  .aboutimg{
+    display: grid;
+      width: 80%;
+      height: 100%;
+      margin-left: 3.5%;
+      margin-top: 5%;
+      border-radius: 10px;
+  }
+ .div,.divabout{
+  width: 100%;
+ } 
+ .div-cred{
+  width: 95%;
+ }
+ .divabout>div{
+  width: 85%;
+ }
+ .div-cred{
+  display: grid;
+ }
+ .cred{
+  margin-left: -15%;
+  width: 90%;
+ }
+ .cred-li{
+  font-size: 13px;
+ }
+ .malek-img{
+  width: 80%;
+  margin-left: 10%;
+  height: auto;
+ }
+ .bure-img{
+  width: 80%;
+  height: auto;
+ }
+ .bur-title{
+  font-size: 45px;
+ }
+ .divabout>.div{
+  width: 80%;
+ }
+ .titre{
+  width: 80%;
+ }
+}

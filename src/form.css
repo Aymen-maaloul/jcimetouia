@@ -1,0 +1,101 @@
+/* styles.css */
+
+
+/* Flexbox for ul to align items */
+
+/*form{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+h2{
+    color: #C59C42;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    font-weight: 400;
+}
+input[type="radio"] {
+    appearance: none; 
+    width: 12px;
+    margin-top: 0%;
+    height: 12px;
+    border: 2px solid rgba(197, 156, 66, 1); 
+    border-radius: 50%; 
+    background-color: #c59c4227;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+input[type="radio"]:checked {
+    border: 2px solid rgba(197, 156, 66, 1); 
+    background-color: #C59C42; 
+}
+
+input[type="radio"]:checked::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: white; 
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.com-item{
+    display: grid;
+    width: 70%;
+}
+
+input{
+    margin-top: 25px;
+    border: solid 1px #E0E0E0;
+    width: 30%;
+    border-radius: 100px;
+    height: 50px;
+}
+input::placeholder{
+    padding-left: 20px;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+label{
+ 
+    margin-left: 15px;   
+    font-family: 'TT Chocolates Trl',sans-serif;
+}
+.oui-item{
+    display: grid;
+}
+.oui{
+    width: 100%;
+
+}
+.form{
+    width: 100%;
+}
+form>div{
+    width: 80%;
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+*/

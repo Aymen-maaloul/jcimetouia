@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    width: 160px;
+    height: 160px;
+    margin-left: 15%;
+    margin-top: 0%;
+
+}
+
+.menu-icon {
+    display: none;
+    margin-left: 30%;
+    margin-top: 8%;
+    font-size: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    font-weight: 500;
+}
+.first{
+    background-image: url("../public/assest/back.png");
+    background-size: cover;
+  background-position: top;
+  height: 700px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+header {
+    width: 100%;
+}
+
+/* Navbar styling */
+nav {
+    background-color: white;
+    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Add padding for spacing */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    z-index: 1000; /* Ensure navbar is on top of other elements */
+}
+
+
+
+/* Remove default list style and add margin between list items */
+.li {
+    list-style: none;
+    margin-left: 30px; /* Adjusted margin */
+}
+
+/* Flexbox for ul to align items */
+.ul {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Align items to the right */
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Automatically take up the remaining space on the left */
+    margin-right: 200px; /* Add right margin to avoid overflow */
+    width: auto; /* Ensure ul doesn't expand unnecessarily */
+}
+.homecontent{
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+     /* Full viewport height */
+    text-align: center; /* Center text */
+    margin-top: 6%;
+}
+h1{
+    font-size:40px;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+}
+.count{
+    font-size: 35px;
+    font-weight: 400;
+}
+.h1{
+    padding-top: 7%;
+    font-size:45px;
+    font-weight: 600;
+}
+h2{
+    font-size:40px;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    font-weight: 400;
+    color: #EDBE38;
+}
+.counter{
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+     /* Full viewport height */
+    text-align: center; 
+    display: flex;
+    flex-direction:row; /* Align items vertically */
+      gap: 40px;
+}
+
+.btn1{
+margin-right: 1%;
+width: 147px;
+height: 41px;
+border-radius: 100px;
+background: none;
+border-color: #ffffff;
+border: 2px solid #ffffff;
+box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 0.5) /* Fully opaque */
+;
+}
+.btn1>a{
+    color: #ffffff;
+    font-weight: 500;
+}
+.btn2{
+margin-left: 1%;
+width: 147px;
+border-radius: 100px;
+border: none;
+background-color: black;
+box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+
+height: 41px;
+}
+.icon{
+    margin-top: 2.5%;
+}
+.icon>a{
+    margin: 15px;
+}
+.btn2>a{
+    color: white;
+    font-weight: 500;
+}
+.join{
+    background-color: #0F7DFF;
+    width: 110px;
+    height: 37px;
+    color: white;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(3, 15, 125, 0.5);
+    border: none;
+}
+.scroll {
+    font-size: 3rem; /* Adjust size as needed */
+    color: #56BDA3; /* Set the color of the icon */
+    animation: scroll-vertical 2s infinite; /* Apply continuous animation */
+    margin-top: 0%;
+  }
+  
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px); /* Move the icon down */
+    }
+    100% {
+      transform: translateY(0); /* Return to original position */
+    }
+  }
+
+
+
+
+
+
+
+  
+@media (max-width: 1024px) {
+    
+}
+
+/* Phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .first{
+        background-image: url("../public/assest/backphone.png");
+    }
+    .logo{
+        width: 160px;
+        height: 160px;
+        margin-left: 0%;
+        margin-top: 0%;
+    
+    }
+    nav ul {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        width: 100%;
+    }
+    .ul{
+        margin-left: -65%;
+        margin-top: 70%;
+        background-color: #ffffff;
+        width: 100%;
+        height: 400px;
+        
+    }
+    .ul>li{
+        padding-left: 100%;
+        padding-right: 100%;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+    
+    .menu-icon {
+        display: block; 
+        color: black;/* Show the hamburger icon */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation links when triggered */
+    }
+    nav{
+        width:100%;
+    }
+    .h1{
+        font-size:28px;
+        width: 90%;
+        margin-left: 5%;
+        font-family: 'TT Chocolates Trl',sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        padding-top: 40%;
+        text-align: center;
+        font-weight: 600;
+    }
+    h2{
+        font-size:16px;
+        width: 80%;
+        margin-left: 8%;
+        font-family: 'TT Chocolates Trl',sans-serif;
+        font-weight: 500;
+        color: #EDBE38;
+    }
+    h3{
+        font-size:15px;
+        font-family: 'Saira ExtraCondensed',sans-serif;
+        font-weight: 500;
+        color: #4266B0;
+    }
+    .counter{
+        width: 50%;
+        margin-top: -5%;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+         /* Full viewport height */
+        text-align: center; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:row; /* Align items vertically */
+          gap: 10px;
+    }
+    .count{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .btn1{
+    margin-right: 1%;
+    margin-top: 5%;
+    width: 147px;
+    height: 41px;
+    border-radius: 100px;
+    background: none;
+    border-color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 0.5) /* Fully opaque */
+    ;
+    }
+    .btn1>a{
+        color: #ffffff;
+        font-weight: 500;
+    }
+    .btn2{
+    margin-left: 1%;
+    width: 147px;
+    border-radius: 100px;
+    border: none;
+    background-color: black;
+    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+    
+    height: 41px;
+    }
+    .icon{
+        margin-top: 14%;
+    }
+    .icon>a{
+        margin: 15px;
+    }
+    .btn2>a{
+        color: white;
+        font-weight: 500;
+    }
+
+}
+.menu-icon {
+    display: none;
+    margin-left: 30%;
+    margin-top: 8%;
+    font-size: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Close button styles */
+.close-btn {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Default desktop menu styles */
+.ul-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+/* Mobile menu, hidden by default */
+.ul-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+}
+.ul-mobile>div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: -23%;
+}
+.ul-mobile>div>li{
+    margin-bottom: 10px;
+}
+
+/* Show the mobile menu when active */
+.nav-active {
+    display: flex;
+}
+
+/* Show the close button when mobile menu is active */
+.nav-active .close-btn {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    /* Show the menu icon on mobile */
+    .menu-icon {
+        display: block;
+        color: black;
+        margin-top: 0%;
+    }
+    .close-btn{
+        display: block;
+        color: #000;
+    }
+    /* Hide desktop menu on mobile */
+    .ul-desktop {
+        display: none;
+    }
+    .close-btn{
+        font-size: 40px;
+        margin-left: 200%;
+        margin-top: -5%;
+    }
+    .close{
+        margin-left: 200%;
+        margin-top: -5%;
+        width: 24px;
+        height: auto;
+    }
+}

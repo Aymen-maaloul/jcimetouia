@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Form Layout</title>
+    <style>
+        /* Center the form on the page */
+        body {
+            background-image: url("./assest/backform.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            font-family: 'TT Chocolates Trl', sans-serif;
+        }
+
+        /* Style for the form */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack rows vertically */
+            align-items: center; /* Center content horizontally *//* Form background */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 7%; /* Optional shadow */
+            width: 70%; /* Set a fixed width for the form */
+        }
+        .input{
+            width: 30%;
+            height: 50px;
+            border-radius: 100px;
+            border: solid #E0E0E0 1px;
+        }
+        /* Style for each row */
+        .form-row {
+            display: flex; /* Display inputs in a row */
+            flex-direction: column; /* Align children vertically */
+            align-items: center; /* Center inputs under headers */
+            gap: 10px; /* Space between inputs */
+            margin-bottom: 15px; /* Space between rows */
+            width: 100%; /* Full width for proper alignment */
+        }
+        .form-row2 {
+            display: flex; /* Display inputs in a row */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            gap: 10px; /* Space between inputs */
+            margin-bottom: 15px; /* Space between rows */
+            width: 100%; /* Full width for proper alignment */
+        }
+
+        /* Center and style input fields */
+        input[type="text"],
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-top: 5px; /* Space between title and input */
+            margin-bottom: 5px; /* Space between input and next element */
+        }
+section{
+    display: grid;
+width: 100%;
+}
+        /* Center-align the text in h2 and h3 */
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 10px; /* Space between title and input */
+            font-family: 'TT Chocolates Trl', sans-serif;
+            font-weight: 400;
+        }
+        h2{
+            color: #C59C42;
+        }
+        h3{
+            color: #002465;
+        }
+        .input::placeholder{
+            padding-left: 20px;
+        }
+        .logo {
+            width: 160px;
+            height: 160px;
+            margin-left: 15%;
+            margin-top: 0%;
+        }
+        h1 {
+            font-family: 'TT Chocolates Trl', sans-serif;
+            font-weight: 500;
+            color: #C59C42;
+            font-size: 45px;
+            text-align: center;
+        }
+        .menu-icon {
+            display: none;
+            margin-left: 30%;
+            margin-top: 8%;
+            font-size: 34px;
+            color: white;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-family: 'TT Chocolates Trl', sans-serif;
+            font-weight: 500;
+        }
+        .first {
+            background-image: url("../public/assest/back.png");
+            background-size: cover;
+            background-position: top;
+            height: 700px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        header {
+            width: 100%;
+        }
+        /* Navbar styling */
+        nav {
+            background-color: white;
+            box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+            height: 100px;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Center items vertically */
+            padding: 0 20px; /* Add padding for spacing */
+            position: fixed; /* Fix the navbar at the top */
+            top: 0;
+            z-index: 1000; /* Ensure navbar is on top of other elements */
+        }
+        .div > div {
+            margin-left: 50px;
+        }
+        /* Remove default list style and add margin between list items */
+        .li {
+            list-style: none;
+            margin-left: 30px; /* Adjusted margin */
+        }
+        .ul {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: flex-end; /* Align items to the right */
+            margin: 0;
+            padding: 0;
+            margin-left: auto; /* Automatically take up the remaining space on the left */
+            margin-right: 200px; /* Add right margin to avoid overflow */
+            width: auto; /* Ensure ul doesn't expand unnecessarily */
+        }
+        
+.join{
+    background-color: #636363;
+    width: 110px;
+    height: 37px;
+    color: white;
+    font-family: 'TT Chocolates Trl',sans-serif;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(3, 15, 125, 0.5);
+    border: none;
+}
+button[type="submit"]{
+    width: 45%;
+    margin-bottom: 30px;
+    height: 50px;
+    background-color: #002465;
+    border: none;
+    color: white;
+    border-radius: 100px;
+}
+@media (max-width: 576px) {
+    .form-row2{
+        display: grid;
+        width: 80%;
+        justify-content: unset;
+    }
+    #in9{
+        width: 80%;
+    }
+    .input{width: 100%;}
+    form{
+        width: 100%;
+        margin-left: 0%;
+
+        padding: 0px;
+    }
+    h1{
+        margin-top: 100px;
+        font-size: 25px;
+    }
+    h2{
+        font-size: 90%;
+    }
+    h3{
+        font-size: 100%;
+    }
+    .form-row{
+        width: 80%;
+    }
+    #form-row2{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        margin-left: 0%;
+    }
+    .ul{
+        display: none;
+    }
+    .join{
+        margin-left: 0%;
+        width: 100px;
+        height: 35px;
+    }
+    button[type="submit"]{
+    width: 80%;
+    margin-bottom: 30px;
+    height: 50px;
+    background-color: #002465;
+    border: none;
+    color: white;
+    border-radius: 100px;
+}
+}
+/* Menu button styles for mobile */
+.menu-icon {
+    display: none;
+    margin-left: 30%;
+    margin-top: 8%;
+    font-size: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Close button styles */
+.close-btn {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Default desktop menu styles */
+.ul-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+/* Mobile menu, hidden by default */
+.ul-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+}
+.ul-mobile>div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: -23%;
+}
+.ul-mobile>div>li{
+    margin-bottom: 10px;
+}
+
+/* Show the mobile menu when active */
+.nav-active {
+    display: flex;
+}
+
+/* Show the close button when mobile menu is active */
+.nav-active .close-btn {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    /* Show the menu icon on mobile */
+    .menu-icon {
+        display: block;
+        color: black;
+        margin-top: 0%;
+    }
+    .close-btn{
+        display: block;
+        color: #000;
+    }
+    /* Hide desktop menu on mobile */
+    .ul-desktop {
+        display: none;
+    }
+    .close{
+        font-size: 40px;
+        margin-left: 200%;
+        margin-top: -5%;
+    }
+}
+
+    
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <img src="./assest/jci.png" alt="Logo" class="logo" />
+                <!-- Menu button for mobile -->
+                <span class="menu-icon">&#9776;</span>
+                <!-- Desktop navigation menu -->
+                <ul class='ul-desktop'>
+                    <li class='li'><a href="">About Us</a></li>
+                    <li class='li'><a href="">Events</a></li>
+                    <li class='li'><a href="">Projects</a></li>
+                    <li class='li'><a href="">Partners</a></li>
+                    <li class='li'><a href="">Contact</a></li>
+                    <li id="li" class='li'><button class='join'>Join Us</button></li>
+                </ul>
+                <!-- Mobile navigation menu -->
+                <ul class='ul-mobile'>
+                    <div>
+                    <!-- Close button for mobile menu -->
+                    <span class="close">&times;</span>
+                    <li class='li'><a href="">About Us</a></li>
+                    <li class='li'><a href="">Events</a></li>
+                    <li class='li'><a href="">Projects</a></li>
+                    <li class='li'><a href="">Partners</a></li>
+                    <li class='li'><a href="">Contact</a></li>
+                    <li id="li" class='li'><button class='join'>Join Us</button></li>
+                </div>
+                </ul>
+            </nav>
+        </header>
+  <center>
+    <form>
+        <h1>Rejoignez-nous</h1>
+        <!-- Line 1: Two text inputs -->
+        <div class="form-row2">
+            <input type="text" name="input1" class="input" placeholder="Input 1">
+            <input type="text" name="input2" class="input" placeholder="Input 2">
+        </div>
+
+        <!-- Line 2: Two text inputs -->
+        <div class="form-row2">
+            <input type="text" name="input3" class="input" placeholder="Input 3">
+            <input type="text" name="input4" class="input" placeholder="Input 4">
+        </div>
+
+        <!-- Line 3: Two text inputs -->
+        <div class="form-row2">
+            <input type="text" name="input5" class="input" placeholder="Input 5">
+            <input type="text" name="input6" class="input" placeholder="Input 6">
+        </div>
+
+        <!-- Line 4: Two text inputs -->
+        <div class="form-row2">
+            <input type="text" name="input7" class="input" placeholder="Input 7">
+            <input type="text" name="input8" class="input" placeholder="Input 8">
+        </div>
+
+        <!-- Line 5: Three radio buttons -->
+        <div class="form-row">
+            <h2>Comment vous avez entendu de JCI METOUIA :*</h2>
+            <div id="form-row2" class="form-row2">
+                <input type="radio" name="radio1" value="option1"> Un(e) ami(e)
+                <input type="radio" name="radio1" value="option2"> Un événement local
+                <input type="radio" name="radio1" value="option3"> Les réseaux sociaux
+            </div>
+        </div>
+
+        <!-- Line 6: Two radio buttons -->
+        <div class="form-row">
+            <h2>Avez-vous d’autres expériences dans la société civile ?</h2>
+            <div  id="form-row2" class="form-row2">
+                <input type="radio" name="radio2" value="option4"> Oui
+                <input type="radio" name="radio2" value="option5"> Non
+            </div>
+        </div>
+
+        <!-- Line 7: One text input -->
+        <div class="form-row">
+            <h2>Si oui citez le(s) :</h2>
+            <input type="text" id="in9" name="input9" class="input" placeholder="Input 9">
+        </div>
+
+        <!-- Line 8: Three radio buttons -->
+        <div class="form-row">
+            <h2>Capacité en Leadership :</h2>
+            <div id="form-row2" class="form-row2">
+                <input type="radio" name="radio3" value="option6"> Faible
+                <input type="radio" name="radio3" value="option7"> Moyenne
+                <input type="radio" name="radio3" value="option8"> Forte
+            </div>
+        </div>
+
+        <!-- Line 9: Three radio buttons -->
+        <div class="form-row">
+            <h2>Capacité d’intégration et de communication :</h2>
+            <div id="form-row2" class="form-row2">
+                <input type="radio" name="radio4" value="option9"> Faible
+                <input type="radio" name="radio4" value="option10"> Moyenne
+                <input type="radio" name="radio4" value="option11"> Forte
+            </div>
+        </div>
+
+        <!-- Line 10: Six checkboxes -->
+        <div class="form-row">
+            <h2>Vos compétences et centres d'intérêts :</h2>
+            <div class="form-row2">
+                <input type="checkbox" name="checkbox1" value="check1"> Montage des vidéos
+                <input type="checkbox" name="checkbox2" value="check2"> Design
+                <input type="checkbox" name="checkbox3" value="check3"> Rédaction
+                <input type="checkbox" name="checkbox4" value="check4"> Sponsoring
+                <input type="checkbox" name="checkbox5" value="check5"> Photographie
+                <input type="checkbox" name="checkbox6" value="check6"> Sports
+            </div>
+        </div>
+
+        <!-- Line 11: Two checkboxes -->
+        <div class="form-row">
+            <div class="form-row2">
+                <input type="checkbox" name="checkbox7" value="check7"> Théâtre
+                <input type="checkbox" name="checkbox8" value="check8"> Autre
+            </div>
+        </div>
+
+        <!-- Line 13: Three radio buttons -->
+        <div class="form-row">
+            <h2>Compétences linguistiques :*</h2>
+            <h3>Anglais</h3>
+            <div id="form-row2" class="form-row2">
+                <input type="radio" name="radio5" value="option12"> Faible
+                <input type="radio" name="radio5" value="option13"> Moyenne
+                <input type="radio" name="radio5" value="option14"> Forte
+            </div>
+        </div>
+
+        <!-- Line 14: Three radio buttons -->
+        <div class="form-row">
+            <h3>Francais</h3>
+            <div id="form-row2" class="form-row2">
+                <input type="radio" name="radio6" value="option15"> Faible
+                <input type="radio" name="radio6" value="option16"> Moyenne
+                <input type="radio" name="radio6" value="option17"> Forte
+            </div>
+        </div>
+
+        <!-- Line 15: One text input -->
+        <div class="form-row">
+            <h2>Lien Facebook :*</h2>
+            <input type="text" name="input11" class="input" placeholder="Input 11">
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form></center>
+</section>
+<script>
+    // Get the menu icon, close button, and the mobile ul element
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeBtn = document.querySelector('.close');
+    const navMenuMobile = document.querySelector('.ul-mobile');
+
+    // Toggle the menu when clicking the menu icon
+    menuIcon.addEventListener('click', () => {
+        navMenuMobile.classList.toggle('nav-active');
+    });
+
+    // Close the menu when clicking the close button
+    closeBtn.addEventListener('click', () => {
+        navMenuMobile.classList.remove('nav-active');
+    });
+</script>
+
+
+</body>
+</html>
