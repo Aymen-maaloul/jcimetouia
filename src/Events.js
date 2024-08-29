@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import './events.css'; // Import your CSS file if needed
 import VideoPlayer from './VideoPlayer'; // Import the VideoPlayer component
-import DivsContent from './DivsContent'; // Import the DivsContent component
 
 
 const Events = () => {
@@ -18,7 +17,7 @@ const Events = () => {
 
   return (
     <section id='events' className='events'>
-      <h1 className='Eventstitle'>Events</h1>
+      <h1 className='Eventstitle'>ÉVÈNEMENT</h1>
       
       
 

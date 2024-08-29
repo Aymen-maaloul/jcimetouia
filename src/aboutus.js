@@ -4,12 +4,12 @@ import './aboutus.css'; // Assuming you have other styles here
 const AboutUs = () => {
   return (
     <section id="AboutUs" className="aboutus">
-      <h1 className="abouttitle">About Us</h1>
+      <h1 className="abouttitle">À propos de nous</h1>
       <div className="div">
         <div className="divabout">
           <img className="aboutimg" src="assest/acad.png" alt="About Us" />
           <div>
-            <h1 className="titre">lorem</h1>
+            <h1 className="titre">Au niveau National</h1>
             <p className="descrp">
             Nous sommes une Organisation à but non lucratif avec un effectif de 3625 membres actifs de 18 à 40 ans et plus de 15000 anciens membres dans plus que 150 organisations locales réparties sur tout le territoire Tunisien.  Chaque membre JCI partage la philosophie selon laquelle pour créer des changements positifs, nous devons nous améliorer nous mêmes ainsi que le monde autour de nous.  Nous recherchons donc des solutions adaptées aux problèmes particuliers de nos communautés afin de bâtir un monde meilleur, créant un impact mondial.            </p>
             <h1 className="titre">Notre Mission</h1>
@@ -42,7 +42,8 @@ const AboutUs = () => {
       <div className="div-bur">
         <div className="bur-div">
           <center>
-          <h1 className='bur-title'>NOS BUREAU</h1></center>
+          <img src='assest/bureau.png' className="bureau-img"></img>
+          </center>
           <div className="presidente">
             <center>
             <img className='malek-img2' src='assest/malek-removebg-preview.png'></img></center>

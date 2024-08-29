@@ -37,13 +37,12 @@ const Home = () => {
           <ul className={`ul-mobile ${isMenuActive ? 'nav-active' : ''}`}>
             <div>
               <img className="close" onClick={closeMenu} src='assest/fermer (1).png'></img>
-              <li className='li'><a href="#AboutUs">About Us</a></li>
-              <li className='li'><a href="#events">Events</a></li>
-              <li className='li'><a href="#projects">Projects</a></li>
-              <li className='li'><a href="#partners">Partners</a></li>
-              <li className='li'><a href="#contact">Contact</a></li>
+              <li className='li'><a href="#AboutUs">À propos</a></li>
+              <li className='li'><a href="#events">Événements</a></li>
+              <li className='li'><a href="#projects">Projets</a></li>
+              <li className='li'><a href="#partners">Partenaires</a></li>
               <li className='li'>
-                <button className='join'>Join Us</button>
+                <button className='join'><a target='_blank' href="/form.html" style={{ textDecoration: "none", color: "white" }}>Join Us</a></button>
               </li>
             </div>
           </ul>

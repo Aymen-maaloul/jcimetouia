@@ -45,22 +45,22 @@ margin-right: 5%;
     font-family: 'TT Chocolates Trl', sans-serif;
 }
 .chabebimg {
-    width: 140px;
+    height: 150px;
     margin-top: 30px;
   }
   
   .maison {
-    width: 200px;
+    width: 150px;
     margin-top: 30px;
   }
   
   .energie {
-    width: 140px;
+    height: 150px;
     margin-top: 30px;
   }
   
   .library {
-    width: 140px;
+    height: 150px;
     margin-top: 30px;
   }
 @media (max-width: 576px) {

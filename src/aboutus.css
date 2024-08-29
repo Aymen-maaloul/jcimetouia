@@ -143,10 +143,17 @@ width: 100%;
 
 
 
-
+.bureau-img{
+  width: 50%;
+  margin-bottom: 50px;
+}
 
 
 @media (max-width: 576px) {
+  .bureau-img{
+    width: 80%;
+    margin-bottom: 50px;
+  }
   .divabout>p{
     margin-left: 2%;
     width: 85%;
@@ -155,6 +162,9 @@ width: 100%;
     font-size: 12px;
     margin-top: 15%;
     color: #ffffff;
+  }
+  .titre{
+    margin-top: 45px;
   }
   .descrp{
     width: 100%;
@@ -175,7 +185,7 @@ width: 100%;
   .aboutimg{
     display: grid;
       width: 85%;
-      height: auto;
+      height: 100%;
       margin-left: 3.5%;
       margin-top: 5%;
       border-radius: 10px;
@@ -203,6 +213,9 @@ width: 100%;
   width: 80%;
   margin-left: 10%;
   height: auto;
+ }
+ .malek-img2{
+  width: 60%;
  }
  .bure-img{
   width: 80%;

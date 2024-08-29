@@ -1,53 +1,36 @@
 import React, { useState } from 'react';
-import './Modal.css'; // Your modal styling here
+import './ImageSlider.css'; // Import the CSS file for styling
 
-const images = [
-  '/assest/assise1.jpg',
-  '/assest/assise2.jpg',
-  '/assest/assise3.jpg',
-  '/assest/assise4.jpg',
-  '/assest/assise5.jpg',
-  '/assest/assise6.jpg'
-  // Add more image paths as needed
-];
-const style = {
-  color: '#EDBE38'
-};
 const ImageSliderModal = ({ isOpen, onClose }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  if (!isOpen) return null;
+  const imageData = [
+    { image: 'assest/rnp1.png', description: 'We are a non-profit organization with a membership of 3,625 active members aged 18 to 40 and over 15,000 former members across more than 150 local organizations throughout Tunisia. Each JCI member shares the philosophy that to create positive change, we must improve ourselves as well as the world around us. We are therefore seeking solutions tailored to the specific problems of our communities in order to build a better world and create a global impact.' },
+    { image: 'assest/rnp1.png', description: 'Description for Keswet Laid' },
+    { image: 'assest/rnp1.png', description: 'Description for Upgrade' },
+    { image: 'assest/rnp1.png', description: 'Description for Choose' },
+  ];
 
-  const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+  if (!isOpen) return null; // Don't render the modal if it's not open
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? imageData.length - 1 : prev - 1));
   };
 
-  const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === imageData.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <span className="modal-close" onClick={onClose}>×</span>
-        <center><h4 style={style}>Autumn Assembly of Zone E for the year 2024</h4></center>
-        <div className="image-slider">
-          <button style={{ backgroundColor: 'transparent' , border: 'none'  }} onClick={goToPreviousImage}><i class="fas fa-chevron-left"></i></button>
-          <img style={{width:'600px'}} src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} className="slider-image" />
-          <button  style={{ backgroundColor: 'transparent' , border: 'none'  }}onClick={goToNextImage}><i class="fas fa-chevron-right"></i></button>
-        </div><center>
-        <p>
-        Here's a more simplified version:
-
----
-
-JCI Metouia joined the Autumn Assembly, which featured Arabic speech and debate contests and the election of the 2024 Zone E committee. Congratulations to the new committee members. Sarra Fguir earned third place in the Arabic speech contest. Rabeb Bourogaa, Malek Hssan, and Rawen Chalghouma reached the finals in the Arabic debate competition. We appreciate their hard work and dedication.
-
---- </p></center>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="close-button" onClick={onClose}>&#10006;</button>
+        <div className="slider">
+          <img src={imageData[currentSlide].image} alt={`Slide ${currentSlide + 1}`} />
+          <p>{imageData[currentSlide].description}</p>
+          <button className="prev-button" onClick={prevSlide}>&laquo;</button>
+          <button className="next-button" onClick={nextSlide}>&raquo;</button>
+        </div>
       </div>
     </div>
   );

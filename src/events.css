@@ -68,28 +68,8 @@ height: 400px;
 display: flex;
   flex-wrap: wrap;
 }
-.div1,.div2,.div3,.div4,.div5{
-  width: 22%;
-  margin-bottom: 5%;
-  height: 70%;
-  margin-top: 2%;
- background: url("../public/assest/conf.png"); 
-  background-size: 100%;
-  margin-left: 50px;
-  background-repeat: no-repeat;
-  
-}
-.div2{
-  width: 22%;
-  margin-bottom: 5%;
-  height: 70%;
-  margin-top: 2%;
- background: url("../public/assest/assise.jpg"); 
-  background-size: 100%;
-  margin-left: 50px;
-    background-repeat: no-repeat;
-  
-}
+
+
 .div1,.div4{
   margin-left: 15%;
   margin-top: -8%;
@@ -97,18 +77,7 @@ display: flex;
 .div5{
   margin-top: -8%;
 }
-.div1{
-  background: url("../public/assest/rnp2.jpg");
-  width: 22%;
-  margin-bottom: 5%;
-  height: 70%;
-  margin-top: 2%;
-  
-  background-size: 100%;
-  
-  margin-left: 15%;
-  background-repeat: no-repeat;
-}
+
 .rnp2btn{
   width: 100%;
   background: transparent; /* Initial background */
@@ -247,16 +216,7 @@ display: flex;
   .div5{
     height: 100%;
   }
-  .div2{
-    margin-bottom: 5%;
-    height: 70%;
-    margin-top: 2%;
-   background: url("../public/assest/assise.jpg"); 
-    background-size: 100%;
-    margin-left: 50px;
-      background-repeat: no-repeat;
-    
-  }
+ 
   .div1,.div4{
   }
   .div5{

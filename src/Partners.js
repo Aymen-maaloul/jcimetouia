@@ -7,7 +7,7 @@ const Partners = () => {
     return (
     <section id='partners' className='Partners'>
         <center>
-        <h1 className='parttitle'>Partners</h1>
+        <h1 className='parttitle'>Partenaires</h1>
         </center>
       <div className='divpart'>
      
