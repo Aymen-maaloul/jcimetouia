@@ -4,6 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centered Form Layout</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-zjACg2xEmMH-82j2",
+      });
+   })();
+</script>
+<script>
+    function sendMail(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Gather all form data
+        let params = {
+            name: document.getElementById('name').value,
+            age: document.getElementById('age').value,
+            lieu: document.getElementById('lieu').value,
+            email: document.getElementById('email').value,
+            tel: document.getElementById('tel').value,
+            parrain: document.getElementById('parrain').value,
+            profession: document.getElementById('profession').value,
+            etude: document.getElementById('etude').value,
+            radio1: getRadioValue('radio1'),
+            radio2: getRadioValue('radio2'),
+            oui: document.getElementById('in9').value,
+            leader: getRadioValue('leader'),
+            com: getRadioValue('com'),
+            checkboxes: getCheckboxValues(),
+            radio3: getRadioValue('radio3'),
+            radio4: getRadioValue('radio4'),
+            input11: document.querySelector('input[name="input11"]').value,
+        };
+
+        // Send email using EmailJS
+        emailjs.send('service_hzpilmf', 'template_bggxkka', params)
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                alert('Email sent successfully!');
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                alert('Failed to send email.');
+            });
+    }
+
+    // Helper function to get the value of the selected radio button
+    function getRadioValue(name) {
+        const selectedRadio = document.querySelector(`input[name="${name}"]:checked`);
+        return selectedRadio ? selectedRadio.value : 'None';
+    }
+
+    // Helper function to get the values of all checked checkboxes
+    function getCheckboxValues() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        return Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', sendMail);
+    });
+</script>
     <style>
         /* Center the form on the page */
         body {
@@ -354,35 +418,35 @@ button[type="submit"]{
         <h1>Rejoignez-nous</h1>
         <!-- Line 1: Two text inputs -->
         <div class="form-row2">
-            <input type="text" name="input1" class="input" placeholder="Input 1">
-            <input type="text" name="input2" class="input" placeholder="Input 2">
+            <input type="text" id="name" name="input1" class="input" placeholder="Input 1" required>
+            <input type="text" id="age" name="input2" class="input" placeholder="Input 2" required>
         </div>
 
         <!-- Line 2: Two text inputs -->
         <div class="form-row2">
-            <input type="text" name="input3" class="input" placeholder="Input 3">
-            <input type="text" name="input4" class="input" placeholder="Input 4">
+            <input type="text" id="lieu" name="input3" class="input" placeholder="Input 3" required>
+            <input type="text" id="email" name="input4" class="input" placeholder="Input 4" required>
         </div>
 
         <!-- Line 3: Two text inputs -->
         <div class="form-row2">
-            <input type="text" name="input5" class="input" placeholder="Input 5">
-            <input type="text" name="input6" class="input" placeholder="Input 6">
+            <input type="text" id="tel" name="input5" class="input" placeholder="Input 5" required>
+            <input type="text" id="parrain" name="input6" class="input" placeholder="Input 6" required>
         </div>
 
         <!-- Line 4: Two text inputs -->
         <div class="form-row2">
-            <input type="text" name="input7" class="input" placeholder="Input 7">
-            <input type="text" name="input8" class="input" placeholder="Input 8">
+            <input type="text" id="profession" name="input7" class="input" placeholder="Input 7" required>
+            <input type="text" id="etude" name="input8" class="input" placeholder="Input 8" required>
         </div>
 
         <!-- Line 5: Three radio buttons -->
         <div class="form-row">
             <h2>Comment vous avez entendu de JCI METOUIA :*</h2>
             <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio1" value="option1"> Un(e) ami(e)
-                <input type="radio" name="radio1" value="option2"> Un événement local
-                <input type="radio" name="radio1" value="option3"> Les réseaux sociaux
+                <input type="radio" name="radio1" value="option1" required> Un(e) ami(e)
+                <input type="radio" name="radio1" value="option2" required> Un événement local
+                <input type="radio" name="radio1" value="option3" required> Les réseaux sociaux
             </div>
         </div>
 
@@ -390,24 +454,24 @@ button[type="submit"]{
         <div class="form-row">
             <h2>Avez-vous d’autres expériences dans la société civile ?</h2>
             <div  id="form-row2" class="form-row2">
-                <input type="radio" name="radio2" value="option4"> Oui
-                <input type="radio" name="radio2" value="option5"> Non
+                <input type="radio" name="radio2" value="option4" required> Oui
+                <input type="radio" name="radio2" value="option5" required> Non
             </div>
         </div>
 
         <!-- Line 7: One text input -->
         <div class="form-row">
             <h2>Si oui citez le(s) :</h2>
-            <input type="text" id="in9" name="input9" class="input" placeholder="Input 9">
+            <input type="text" id="in9" name="input9" class="input" placeholder="Input 9" required>
         </div>
 
         <!-- Line 8: Three radio buttons -->
         <div class="form-row">
             <h2>Capacité en Leadership :</h2>
             <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio3" value="option6"> Faible
-                <input type="radio" name="radio3" value="option7"> Moyenne
-                <input type="radio" name="radio3" value="option8"> Forte
+                <input type="radio" name="radio3" value="option6" required> Faible
+                <input type="radio" name="radio3" value="option7" required> Moyenne
+                <input type="radio" name="radio3" value="option8" required> Forte
             </div>
         </div>
 
@@ -415,9 +479,9 @@ button[type="submit"]{
         <div class="form-row">
             <h2>Capacité d’intégration et de communication :</h2>
             <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio4" value="option9"> Faible
-                <input type="radio" name="radio4" value="option10"> Moyenne
-                <input type="radio" name="radio4" value="option11"> Forte
+                <input type="radio" name="radio4" value="option9" required> Faible
+                <input type="radio" name="radio4" value="option10" required> Moyenne
+                <input type="radio" name="radio4" value="option11" required> Forte
             </div>
         </div>
 
@@ -447,9 +511,9 @@ button[type="submit"]{
             <h2>Compétences linguistiques :*</h2>
             <h3>Anglais</h3>
             <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio5" value="option12"> Faible
-                <input type="radio" name="radio5" value="option13"> Moyenne
-                <input type="radio" name="radio5" value="option14"> Forte
+                <input type="radio" name="radio5" value="option12" required> Faible
+                <input type="radio" name="radio5" value="option13" required> Moyenne
+                <input type="radio" name="radio5" value="option14" required> Forte
             </div>
         </div>
 
@@ -457,20 +521,20 @@ button[type="submit"]{
         <div class="form-row">
             <h3>Francais</h3>
             <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio6" value="option15"> Faible
-                <input type="radio" name="radio6" value="option16"> Moyenne
-                <input type="radio" name="radio6" value="option17"> Forte
+                <input type="radio" name="radio6" value="option15" required> Faible
+                <input type="radio" name="radio6" value="option16" required> Moyenne
+                <input type="radio" name="radio6" value="option17" required> Forte
             </div>
         </div>
 
         <!-- Line 15: One text input -->
         <div class="form-row">
             <h2>Lien Facebook :*</h2>
-            <input type="text" name="input11" class="input" placeholder="Input 11">
+            <input type="text" name="input11" class="input" placeholder="Input 11" required>
         </div>
 
         <!-- Submit button -->
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="sendMail()">Submit</button>
     </form></center>
 </section>
 <script>
