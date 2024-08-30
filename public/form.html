@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Form Layout</title>
+    <title>recrutement jci metouia</title>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
    (function(){
       emailjs.init({
-        publicKey: "-zjACg2xEmMH-82j2",
+        publicKey: "fZlz3jpE_Wu78FA1c",
       });
    })();
 </script>
@@ -20,6 +20,8 @@
 
         // Gather all form data
         let params = {
+            
+            subject: document.getElementById('sub').value,
             name: document.getElementById('name').value,
             age: document.getElementById('age').value,
             lieu: document.getElementById('lieu').value,
@@ -31,12 +33,15 @@
             radio1: getRadioValue('radio1'),
             radio2: getRadioValue('radio2'),
             oui: document.getElementById('in9').value,
+            dispo:document.getElementById('dispo').value,
             leader: getRadioValue('leader'),
             com: getRadioValue('com'),
             checkboxes: getCheckboxValues(),
             radio3: getRadioValue('radio3'),
             radio4: getRadioValue('radio4'),
-            input11: document.querySelector('input[name="input11"]').value,
+            radio5: getRadioValue('radio5'),
+            radio6: getRadioValue('radio6'),
+            input11: document.querySelector('input[name="input11"]').value
         };
 
         // Check for missing fields
@@ -51,7 +56,7 @@
         submitButton.textContent = 'Sending...';
 
         // Send email using EmailJS
-        emailjs.send('service_hzpilmf', 'template_bggxkka', params)
+        emailjs.send('service_s3wez4e', 'template_emdghrn', params)
             .then((response) => {
                 console.log('Email sent successfully:', response);
                 alert('Email sent successfully!');
@@ -195,7 +200,11 @@ width: 100%;
             height: 700px;
             background-size: 100%;
             background-repeat: no-repeat;
-        }
+        }#logo{
+        margin-left: 15%;
+        margin-top: 0%;
+    
+}
         header {
             width: 100%;
         }
@@ -248,9 +257,22 @@ button[type="submit"]{
     background-color: #002465;
     border: none;
     color: white;
+    font-size: 14px;
     border-radius: 100px;
 }
 @media (max-width: 576px) {
+    body{
+        background: url('assest/backformphone.png');
+        background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            font-family: 'TT Chocolates Trl', sans-serif;
+    }
     .form-row2{
         display: grid;
         width: 80%;
@@ -303,6 +325,7 @@ button[type="submit"]{
     color: white;
     border-radius: 100px;
 }
+
 }
 /* Menu button styles for mobile */
 .menu-icon {
@@ -376,6 +399,7 @@ button[type="submit"]{
 
 @media (max-width: 576px) {
     /* Show the menu icon on mobile */
+    
     .menu-icon {
         display: block;
         color: black;
@@ -394,7 +418,19 @@ button[type="submit"]{
         margin-left: 200%;
         margin-top: -5%;
     }
+    #sub{
+    width: 80%;
+    margin-bottom: 30px;
+    height: 50px;
+    color: white;
+    border-radius: 100px;
 }
+#logo{
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+}
+
 
     
     </style>
@@ -403,16 +439,17 @@ button[type="submit"]{
     <section>
         <header>
             <nav>
-                <img src="./assest/jci.png" alt="Logo" class="logo" />
+                <a href="http://jcimetouia.tn/" id='logo'>
+                    <img src="./assest/jci.png" alt="Logo" class="logo" />
+                </a>
                 <!-- Menu button for mobile -->
                 <span class="menu-icon">&#9776;</span>
                 <!-- Desktop navigation menu -->
                 <ul class='ul-desktop'>
-                    <li class='li'><a href="">About Us</a></li>
-                    <li class='li'><a href="">Events</a></li>
-                    <li class='li'><a href="">Projects</a></li>
-                    <li class='li'><a href="">Partners</a></li>
-                    <li class='li'><a href="">Contact</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#AboutUs">About Us</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#events">Events</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#projects">Projects</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#partners">Partners</a></li>
                     <li id="li" class='li'><button class='join'>Join Us</button></li>
                 </ul>
                 <!-- Mobile navigation menu -->
@@ -420,11 +457,11 @@ button[type="submit"]{
                     <div>
                     <!-- Close button for mobile menu -->
                     <span class="close">&times;</span>
-                    <li class='li'><a href="">About Us</a></li>
-                    <li class='li'><a href="">Events</a></li>
-                    <li class='li'><a href="">Projects</a></li>
-                    <li class='li'><a href="">Partners</a></li>
-                    <li class='li'><a href="">Contact</a></li>
+                    <li class='li'><a href="../src/aboutus.js">About Us</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#AboutUs">About Us</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#events">Events</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#projects">Projects</a></li>
+                    <li class='li'><a href="http://jcimetouia.tn/#partners">Partners</a></li>
                     <li id="li" class='li'><button class='join'>Join Us</button></li>
                 </div>
                 </ul>
@@ -433,6 +470,7 @@ button[type="submit"]{
   <center>
     <form>
         <h1>Rejoignez-nous</h1>
+        <input type="text" id="sub" class="input" placeholder="sujet">
         <!-- Line 1: Two text inputs -->
         <div class="form-row2">
             <input type="text" id="name" name="input1" class="input" placeholder="Nom & prénom *" required>
@@ -479,7 +517,8 @@ button[type="submit"]{
         <!-- Line 7: One text input -->
         <div class="form-row">
             <h2>Si oui citez le(s) :</h2>
-            <input type="text" id="in9" name="input9" class="input" placeholder="Input 9" required>
+            <input type="text" id="in9" name="input9" class="input" placeholder="Votre réponse" required>
+            <input type="text" id="dispo" name="input9" class="input" placeholder="Votre disponibilité" required>
         </div>
 
         <!-- Line 8: Three radio buttons -->
@@ -547,11 +586,11 @@ button[type="submit"]{
         <!-- Line 15: One text input -->
         <div class="form-row">
             <h2>Lien Facebook :*</h2>
-            <input type="text" name="input11" class="input" placeholder="Input 11" required>
+            <input type="text" name="input11" class="input" placeholder="Lien" required>
         </div>
 
         <!-- Submit button -->
-        <button type="submit" onclick="sendMail()">Submit</button>
+        <button type="submit" onclick="sendMail()">ENVOYER</button>
     </form></center>
 </section>
 <script>
