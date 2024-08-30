@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>recrutement jci metouia</title>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>recrutement jci metouia</title>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
+        <script type="text/javascript">
    (function(){
       emailjs.init({
         publicKey: "fZlz3jpE_Wu78FA1c",
       });
    })();
 </script>
-<script>
+        <script>
     function sendMail(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); 
 
-        // Gather all form data
         let params = {
             
             subject: document.getElementById('sub').value,
@@ -44,18 +43,15 @@
             input11: document.querySelector('input[name="input11"]').value
         };
 
-        // Check for missing fields
         if (!params.name || !params.email) {
             alert('Name and email are required.');
             return;
         }
 
-        // Disable submit button to prevent multiple submissions
         const submitButton = document.querySelector('button[type="submit"]');
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
 
-        // Send email using EmailJS
         emailjs.send('service_s3wez4e', 'template_emdghrn', params)
             .then((response) => {
                 console.log('Email sent successfully:', response);
@@ -66,19 +62,16 @@
                 alert('Failed to send email.');
             })
             .finally(() => {
-                // Re-enable submit button
                 submitButton.disabled = false;
                 submitButton.textContent = 'Submit';
             });
     }
 
-    // Helper function to get the value of the selected radio button
     function getRadioValue(name) {
         const selectedRadio = document.querySelector(`input[name="${name}"]:checked`);
         return selectedRadio ? selectedRadio.value : 'None';
     }
 
-    // Helper function to get the values of all checked checkboxes
     function getCheckboxValues() {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
         return Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
@@ -90,29 +83,29 @@
     });
 </script>
 
-    <style>
-        /* Center the form on the page */
+        <style>
+        
         body {
             background-image: url("./assest/backform.png");
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            min-height: 100vh; /* Full viewport height */
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
             margin: 0;
             font-family: 'TT Chocolates Trl', sans-serif;
         }
 
-        /* Style for the form */
+       
         form {
             display: flex;
-            flex-direction: column; /* Stack rows vertically */
-            align-items: center; /* Center content horizontally *//* Form background */
+            flex-direction: column; 
+            align-items: center; 
             padding: 20px;
             border-radius: 8px;
-            margin-top: 7%; /* Optional shadow */
-            width: 70%; /* Set a fixed width for the form */
+            margin-top: 7%; 
+            width: 70%; 
         }
         .input{
             width: 30%;
@@ -120,39 +113,36 @@
             border-radius: 100px;
             border: solid #E0E0E0 1px;
         }
-        /* Style for each row */
         .form-row {
-            display: flex; /* Display inputs in a row */
-            flex-direction: column; /* Align children vertically */
-            align-items: center; /* Center inputs under headers */
-            gap: 10px; /* Space between inputs */
-            margin-bottom: 15px; /* Space between rows */
-            width: 100%; /* Full width for proper alignment */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 10px; 
+            margin-bottom: 15px; 
+            width: 100%; 
         }
         .form-row2 {
-            display: flex; /* Display inputs in a row */
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-            gap: 10px; /* Space between inputs */
-            margin-bottom: 15px; /* Space between rows */
-            width: 100%; /* Full width for proper alignment */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            margin-bottom: 15px; 
+            width: 100%; 
         }
 
-        /* Center and style input fields */
         input[type="text"],
         input[type="radio"],
         input[type="checkbox"] {
-            margin-top: 5px; /* Space between title and input */
-            margin-bottom: 5px; /* Space between input and next element */
+            margin-top: 5px; 
+            margin-bottom: 5px;
         }
 section{
     display: grid;
 width: 100%;
 }
-        /* Center-align the text in h2 and h3 */
         h2, h3 {
             text-align: center;
-            margin-bottom: 10px; /* Space between title and input */
+            margin-bottom: 10px; 
             font-family: 'TT Chocolates Trl', sans-serif;
             font-weight: 400;
         }
@@ -208,41 +198,39 @@ width: 100%;
         header {
             width: 100%;
         }
-        /* Navbar styling */
         nav {
             background-color: white;
             box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
             height: 100px;
             width: 100%;
             display: flex;
-            align-items: center; /* Center items vertically */
-            padding: 0 20px; /* Add padding for spacing */
-            position: fixed; /* Fix the navbar at the top */
+            align-items: center; 
+            padding: 0 20px;
+            position: fixed; 
             top: 0;
-            z-index: 1000; /* Ensure navbar is on top of other elements */
+            z-index: 1000; 
         }
         .div > div {
             margin-left: 50px;
         }
-        /* Remove default list style and add margin between list items */
         .li {
             list-style: none;
-            margin-left: 30px; /* Adjusted margin */
+            margin-left: 30px; 
         }
         .ul {
             display: flex;
-            align-items: center; /* Center items vertically */
-            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+            justify-content: flex-end;
             margin: 0;
             padding: 0;
-            margin-left: auto; /* Automatically take up the remaining space on the left */
-            margin-right: 200px; /* Add right margin to avoid overflow */
-            width: auto; /* Ensure ul doesn't expand unnecessarily */
+            margin-left: auto;
+            margin-right: 200px; 
+            width: auto; 
         }
         
 .join{
     background-color: #636363;
-    width: 110px;
+    width: 160px;
     height: 37px;
     color: white;
     font-family: 'TT Chocolates Trl',sans-serif;
@@ -267,9 +255,9 @@ button[type="submit"]{
             background-size: 100%;
             background-attachment: fixed;
             display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            min-height: 100vh; /* Full viewport height */
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
             margin: 0;
             font-family: 'TT Chocolates Trl', sans-serif;
     }
@@ -336,7 +324,6 @@ button[type="submit"]{
     cursor: pointer;
 }
 
-/* Close button styles */
 .close-btn {
     display: none;
     font-size: 24px;
@@ -348,7 +335,6 @@ button[type="submit"]{
     z-index: 1000;
 }
 
-/* Default desktop menu styles */
 .ul-desktop {
     display: flex;
     align-items: center;
@@ -359,7 +345,6 @@ button[type="submit"]{
     margin-right: 200px;
 }
 
-/* Mobile menu, hidden by default */
 .ul-mobile {
     display: none;
     flex-direction: column;
@@ -392,18 +377,17 @@ button[type="submit"]{
     color: #717171;
 }
 
-/* Show the mobile menu when active */
 .nav-active {
     display: flex;
 }
 
-/* Show the close button when mobile menu is active */
 .nav-active .close-btn {
     display: block;
 }
 @media (max-width: 576px) {
-    /* Show the menu icon on mobile */
-    
+    #sub{
+        width: 78%;
+    }
     .menu-icon {
         display: block;
         color: black;
@@ -413,7 +397,6 @@ button[type="submit"]{
         display: block;
         color: #000;
     }
-    /* Hide desktop menu on mobile */
     .ul-desktop {
         display: none;
     }
@@ -423,12 +406,12 @@ button[type="submit"]{
         margin-top: -5%;
     }
     .close{
-        margin-left: 230%;
+        margin-left: 160%;
         margin-top: -5%;
         width: 24px;
         height: auto;
     }
-    .join{        width: 300%;
+    .join{        width: 200%;
         height: 50px;
         font-size: 18px;
         margin-top: 30px;
@@ -442,182 +425,217 @@ button[type="submit"]{
 
     
     </style>
-</head>
-<body>
-    <section>
-        <header>
-            <nav>
-                <a href="http://jcimetouia.tn/" id='logo'>
-                    <img src="./assest/jci.png" alt="Logo" class="logo" />
-                </a>
-                <!-- Menu button for mobile -->
-                <span class="menu-icon">&#9776;</span>
-                <!-- Desktop navigation menu -->
-                <ul class='ul-desktop'>
-                    <li class='li'><a href="http://jcimetouia.tn/#AboutUs">About Us</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#events">Events</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#projects">Projects</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#partners">Partners</a></li>
-                    <li id="li" class='li'><button class='join'>Join Us</button></li>
-                </ul>
-                <!-- Mobile navigation menu -->
-                <ul class='ul-mobile'>
-                    <div>
-                    <!-- Close button for mobile menu -->
-                    <img class="close" onClick={closeMenu} src='assest/fermer (1).png'>
-                    
-                    <li class='li'><a href="http://jcimetouia.tn/#AboutUs">About Us</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#events">Events</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#projects">Projects</a></li>
-                    <li class='li'><a href="http://jcimetouia.tn/#partners">Partners</a></li>
-                    <li id="li" class='li'><button class='join'>Join Us</button></li>
-                </div>
-                </ul>
-            </nav>
-        </header>
-  <center>
-    <form>
-        <h1>Rejoignez-nous</h1>
-        <input type="text" id="sub" class="input" placeholder="sujet">
-        <!-- Line 1: Two text inputs -->
-        <div class="form-row2">
-            <input type="text" id="name" name="input1" class="input" placeholder="Nom & prénom *" required>
-            <input type="text" id="age" name="input2" class="input" placeholder="Age *" required>
-        </div>
+    </head>
+    <body>
+        <section>
+            <header>
+                <nav>
+                    <a href="http://jcimetouia.tn/" id='logo'>
+                        <img src="./assest/jci.png" alt="Logo" class="logo" />
+                    </a>
+                    <span class="menu-icon">&#9776;</span>
+                    <ul class='ul-desktop'>
+                        <li class='li'><a
+                                href="http://jcimetouia.tn/#AboutUs">About
+                                Us</a></li>
+                        <li class='li'><a
+                                href="http://jcimetouia.tn/#events">Events</a></li>
+                        <li class='li'><a
+                                href="http://jcimetouia.tn/#projects">Projects</a></li>
+                        <li class='li'><a
+                                href="http://jcimetouia.tn/#partners">Partners</a></li>
+                        <li id="li" class='li'><button class='join'>Rejoignez-nous
+                                </button></li>
+                    </ul>
+                    <ul class='ul-mobile'>
+                        <div>
+                            <img class="close" onClick={closeMenu}
+                                src='assest/fermer (1).png'>
 
-        <!-- Line 2: Two text inputs -->
-        <div class="form-row2">
-            <input type="text" id="lieu" name="input3" class="input" placeholder="Lieu d'habitation *" required>
-            <input type="text" id="email" name="input4" class="input" placeholder="e-mail *" required>
-        </div>
+                            <li class='li'><a
+                                    href="http://jcimetouia.tn/#AboutUs">About
+                                    Us</a></li>
+                            <li class='li'><a
+                                    href="http://jcimetouia.tn/#events">Events</a></li>
+                            <li class='li'><a
+                                    href="http://jcimetouia.tn/#projects">Projects</a></li>
+                            <li class='li'><a
+                                    href="http://jcimetouia.tn/#partners">Partners</a></li>
+                            <li id="li" class='li'><button class='join'>Rejoignez-nous
+                                    Us</button></li>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+            <center>
+                <form>
+                    <h1>Rejoignez-nous</h1>
+                    <input type="text" id="sub" class="input"
+                        placeholder="sujet">
+                    <div class="form-row2">
+                        <input type="text" id="name" name="input1" class="input"
+                            placeholder="Nom & prénom *" required>
+                        <input type="text" id="age" name="input2" class="input"
+                            placeholder="Age *" required>
+                    </div>
 
-        <!-- Line 3: Two text inputs -->
-        <div class="form-row2">
-            <input type="text" id="tel" name="input5" class="input" placeholder="téléphone *" required>
-            <input type="text" id="parrain" name="input6" class="input" placeholder="Votre parrain ou marraine *" required>
-        </div>
+                    <div class="form-row2">
+                        <input type="text" id="lieu" name="input3" class="input"
+                            placeholder="Lieu d'habitation *" required>
+                        <input type="text" id="email" name="input4"
+                            class="input" placeholder="e-mail *" required>
+                    </div>
 
-        <!-- Line 4: Two text inputs -->
-        <div class="form-row2">
-            <input type="text" id="profession" name="input7" class="input" placeholder="Profession" required>
-            <input type="text" id="etude" name="input8" class="input" placeholder="Votre domaine d'étude  *" required>
-        </div>
+                    <div class="form-row2">
+                        <input type="text" id="tel" name="input5" class="input"
+                            placeholder="téléphone *" required>
+                        <input type="text" id="parrain" name="input6"
+                            class="input"
+                            placeholder="Votre parrain ou marraine *" required>
+                    </div>
 
-        <!-- Line 5: Three radio buttons -->
-        <div class="form-row">
-            <h2>Comment vous avez entendu de JCI METOUIA :*</h2>
-            <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio1" value=" Un(e) ami(e)" required> Un(e) ami(e)
-                <input type="radio" name="radio1" value=" Un événement local" required> Un événement local
-                <input type="radio" name="radio1" value=" Les réseaux sociaux" required> Les réseaux sociaux
-            </div>
-        </div>
+                    <div class="form-row2">
+                        <input type="text" id="profession" name="input7"
+                            class="input" placeholder="Profession" required>
+                        <input type="text" id="etude" name="input8"
+                            class="input" placeholder="Votre domaine d'étude  *"
+                            required>
+                    </div>
 
-        <!-- Line 6: Two radio buttons -->
-        <div class="form-row">
-            <h2>Avez-vous d’autres expériences dans la société civile ?</h2>
-            <div  id="form-row2" class="form-row2">
-                <input type="radio" name="radio2" value="Oui" required> Oui
-                <input type="radio" name="radio2" value="Non" required> Non
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Comment vous avez entendu de JCI METOUIA :*</h2>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio1"
+                                value=" Un(e) ami(e)" required> Un(e) ami(e)
+                            <input type="radio" name="radio1"
+                                value=" Un événement local" required> Un
+                            événement local
+                            <input type="radio" name="radio1"
+                                value=" Les réseaux sociaux" required> Les
+                            réseaux sociaux
+                        </div>
+                    </div>
 
-        <!-- Line 7: One text input -->
-        <div class="form-row">
-            <h2>Si oui citez le(s) :</h2>
-            <input type="text" id="in9" name="input9" class="input" placeholder="Votre réponse" required>
-            <input type="text" id="dispo" name="input9" class="input" placeholder="Votre disponibilité" required>
-        </div>
+                    <div class="form-row">
+                        <h2>Avez-vous d’autres expériences dans la société
+                            civile ?</h2>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio2" value="Oui"
+                                required> Oui
+                            <input type="radio" name="radio2" value="Non"
+                                required> Non
+                        </div>
+                    </div>
 
-        <!-- Line 8: Three radio buttons -->
-        <div class="form-row">
-            <h2>Capacité en Leadership :</h2>
-            <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio3" value="Faible" required> Faible
-                <input type="radio" name="radio3" value="Moyenne" required> Moyenne
-                <input type="radio" name="radio3" value="Forte" required> Forte
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Si oui citez le(s) :</h2>
+                        <input type="text" id="in9" name="input9" class="input"
+                            placeholder="Votre réponse" required>
+                        <input type="text" id="dispo" name="input9"
+                            class="input" placeholder="Votre disponibilité"
+                            required>
+                    </div>
 
-        <!-- Line 9: Three radio buttons -->
-        <div class="form-row">
-            <h2>Capacité d’intégration et de communication :</h2>
-            <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio4" value="Faible" required> Faible
-                <input type="radio" name="radio4" value="Moyenne" required> Moyenne
-                <input type="radio" name="radio4" value="Forte" required> Forte
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Capacité en Leadership :</h2>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio3" value="Faible"
+                                required> Faible
+                            <input type="radio" name="radio3" value="Moyenne"
+                                required> Moyenne
+                            <input type="radio" name="radio3" value="Forte"
+                                required> Forte
+                        </div>
+                    </div>
 
-        <!-- Line 10: Six checkboxes -->
-        <div class="form-row">
-            <h2>Vos compétences et centres d'intérêts :</h2>
-            <div class="form-row2">
-                <input type="checkbox" name="checkbox1" value="Montage des vidéos"> Montage des vidéos
-                <input type="checkbox" name="checkbox2" value="Design"> Design
-                <input type="checkbox" name="checkbox3" value="Rédaction"> Rédaction
-                <input type="checkbox" name="checkbox4" value="Sponsoring"> Sponsoring
-                <input type="checkbox" name="checkbox5" value="Photographie"> Photographie
-                <input type="checkbox" name="checkbox6" value="Sports"> Sports
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Capacité d’intégration et de communication :</h2>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio4" value="Faible"
+                                required> Faible
+                            <input type="radio" name="radio4" value="Moyenne"
+                                required> Moyenne
+                            <input type="radio" name="radio4" value="Forte"
+                                required> Forte
+                        </div>
+                    </div>
 
-        <!-- Line 11: Two checkboxes -->
-        <div class="form-row">
-            <div class="form-row2">
-                <input type="checkbox" name="checkbox7" value="Théâtre"> Théâtre
-                <input type="checkbox" name="checkbox8" value="Autre"> Autre
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Vos compétences et centres d'intérêts :</h2>
+                        <div class="form-row2">
+                            <input type="checkbox" name="checkbox1"
+                                value="Montage des vidéos"> Montage des vidéos
+                            <input type="checkbox" name="checkbox2"
+                                value="Design"> Design
+                            <input type="checkbox" name="checkbox3"
+                                value="Rédaction"> Rédaction
+                            <input type="checkbox" name="checkbox4"
+                                value="Sponsoring"> Sponsoring
+                            <input type="checkbox" name="checkbox5"
+                                value="Photographie"> Photographie
+                            <input type="checkbox" name="checkbox6"
+                                value="Sports"> Sports
+                        </div>
+                    </div>
 
-        <!-- Line 13: Three radio buttons -->
-        <div class="form-row">
-            <h2>Compétences linguistiques :*</h2>
-            <h3>Anglais</h3>
-            <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio5" value="Faible" required> Faible
-                <input type="radio" name="radio5" value="Moyenne" required> Moyenne
-                <input type="radio" name="radio5" value="Forte" required> Forte
-            </div>
-        </div>
+                    <div class="form-row">
+                        <div class="form-row2">
+                            <input type="checkbox" name="checkbox7"
+                                value="Théâtre"> Théâtre
+                            <input type="checkbox" name="checkbox8"
+                                value="Autre"> Autre
+                        </div>
+                    </div>
 
-        <!-- Line 14: Three radio buttons -->
-        <div class="form-row">
-            <h3>Francais</h3>
-            <div id="form-row2" class="form-row2">
-                <input type="radio" name="radio6" value="Faible" required> Faible
-                <input type="radio" name="radio6" value="Moyenne" required> Moyenne
-                <input type="radio" name="radio6" value="Forte" required> Forte
-            </div>
-        </div>
+                    <div class="form-row">
+                        <h2>Compétences linguistiques :*</h2>
+                        <h3>Anglais</h3>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio5" value="Faible"
+                                required> Faible
+                            <input type="radio" name="radio5" value="Moyenne"
+                                required> Moyenne
+                            <input type="radio" name="radio5" value="Forte"
+                                required> Forte
+                        </div>
+                    </div>
 
-        <!-- Line 15: One text input -->
-        <div class="form-row">
-            <h2>Lien Facebook :*</h2>
-            <input type="text" name="input11" class="input" placeholder="Lien" required>
-        </div>
+                    <div class="form-row">
+                        <h3>Francais</h3>
+                        <div id="form-row2" class="form-row2">
+                            <input type="radio" name="radio6" value="Faible"
+                                required> Faible
+                            <input type="radio" name="radio6" value="Moyenne"
+                                required> Moyenne
+                            <input type="radio" name="radio6" value="Forte"
+                                required> Forte
+                        </div>
+                    </div>
 
-        <!-- Submit button -->
-        <button type="submit" onclick="sendMail()">ENVOYER</button>
-    </form></center>
-</section>
-<script>
-    // Get the menu icon, close button, and the mobile ul element
+                    <!-- Line 15: One text input -->
+                    <div class="form-row">
+                        <h2>Lien Facebook :*</h2>
+                        <input type="text" name="input11" class="input"
+                            placeholder="Lien" required>
+                    </div>
+
+                    <button type="submit" onclick="sendMail()">ENVOYER</button>
+                </form></center>
+        </section>
+        <script>
+    
     const menuIcon = document.querySelector('.menu-icon');
     const closeBtn = document.querySelector('.close');
     const navMenuMobile = document.querySelector('.ul-mobile');
 
-    // Toggle the menu when clicking the menu icon
     menuIcon.addEventListener('click', () => {
         navMenuMobile.classList.toggle('nav-active');
     });
 
-    // Close the menu when clicking the close button
     closeBtn.addEventListener('click', () => {
         navMenuMobile.classList.remove('nav-active');
     });
 </script>
 
-
-</body>
+    </body>
 </html>
