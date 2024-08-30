@@ -1,14 +1,13 @@
-// Events.js
 import React, { useState, useEffect } from 'react';
-import './events.css'; // Import your CSS file if needed
-import VideoPlayer from './VideoPlayer'; // Import the VideoPlayer component
+import './events.css'; 
+import VideoPlayer from './VideoPlayer';
 
 
 const Events = () => {
   const [activeButton, setActiveButton] = useState('button1');
 
   useEffect(() => {
-    handleButtonClick('button1'); // Simulate a click on button1 when the page loads
+    handleButtonClick('button1'); 
   }, []);
 
   const handleButtonClick = (button) => {
@@ -17,14 +16,14 @@ const Events = () => {
 
   return (
     <section id='events' className='events'>
-      <h1 className='Eventstitle'>ÉVÈNEMENT</h1>
-      
-      
+      <h1 className='Eventstitle'>Évènement</h1>
+
+
 
       <div className='div'>
-        
-            <VideoPlayer /> {/* Use the VideoPlayer component here */}
-       
+
+        <VideoPlayer />
+
       </div>
       <div className="gradient-dividero"></div>
     </section>

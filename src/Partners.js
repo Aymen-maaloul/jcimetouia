@@ -3,43 +3,42 @@ import './Partners.css'; // Import your CSS file if needed
 
 
 const Partners = () => {
-    
-    return (
+
+  return (
     <section id='partners' className='Partners'>
-        <center>
+      <center>
         <h1 className='parttitle'>Partenaires</h1>
-        </center>
+      </center>
       <div className='divpart'>
-     
+
         <div className='chabeb'>
-            <center>
+          <center>
             <img className='chabebimg' src='assest/chabeb.png'></img>
-            
-            </center>
+
+          </center>
         </div>
         <div>
-            <center>
-            <img  className='maison'  src='assest/maison.png'></img>
-            
-            </center>
+          <center>
+            <img className='maison' src='assest/maison.png'></img>
+
+          </center>
         </div>
         <div>
-            <center>
-            <img  className='energie'   src='assest/energie.png'></img>
-            
-            </center>
+          <center>
+            <img className='energie' src='assest/energie.png'></img>
+
+          </center>
         </div>
         <div>
-            <center>
-            <img  className='library'   src='assest/library.png'></img>
-            
-            </center>
-            
+          <center>
+            <img className='library' src='assest/library.png'></img>
+
+          </center>
+
         </div>
       </div>
-      </section>
-    );
-  };
-  
+    </section>
+  );
+};
+
 export default Partners;
-  

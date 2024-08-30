@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import './firstpage.css'; // Import your CSS file
+import './firstpage.css'; 
 import CountUp from 'react-countup';
 
 const Home = () => {
   const [isMenuActive, setMenuActive] = useState(false);
 
-  // Toggle menu visibility
+  
   const toggleMenu = () => {
     setMenuActive(!isMenuActive);
   };
 
-  // Close menu
+ 
   const closeMenu = () => {
     setMenuActive(false);
   };
@@ -19,19 +19,19 @@ const Home = () => {
     <section className='first'>
       <header>
         <nav>
-        <a href='http://jcimetouia.tn/' id='logo'>
-                <img src="./assest/jci.png" alt="Logo" class="logo" />
-            </a>
+          <a href='http://jcimetouia.tn/' id='logo'>
+            <img src="./assest/jci.png" alt="Logo" class="logo" />
+          </a>
           <span className="menu-icon" onClick={toggleMenu}>&#9776;</span>
 
           <ul className={`ul-desktop ${isMenuActive ? 'nav-active' : ''}`}>
-            <li className='li'><a href="#AboutUs">About Us</a></li>
-            <li className='li'><a href="#events">Events</a></li>
-            <li className='li'><a href="#projects">Projects</a></li>
-            <li className='li'><a href="#partners">Partners</a></li>
+            <li className='li'><a href="#AboutUs">À propos</a></li>
+            <li className='li'><a href="#events">Évènement</a></li>
+            <li className='li'><a href="#projects">Projets</a></li>
+            <li className='li'><a href="#partners">Partenaires</a></li>
             <li className='li'>
               <button className='join'>
-                <a target='_blank' href="/form.html" style={{ textDecoration: "none", color: "white" }}>Join Us</a>
+                <a target='_blank' href="/form.html" style={{ textDecoration: "none", color: "white" }}>Rejoignez-nous</a>
               </button>
             </li>
           </ul>
@@ -44,7 +44,7 @@ const Home = () => {
               <li className='li'><a href="#projects">Projets</a></li>
               <li className='li'><a href="#partners">Partenaires</a></li>
               <li className='li'>
-                <button className='join'><a target='_blank' href="/form.html" style={{ textDecoration: "none", color: "white" }}>Join Us</a></button>
+                <button className='join'><a target='_blank' href="/form.html" style={{ textDecoration: "none", color: "white" }}>Rejoignez-nous</a></button>
               </li>
             </div>
           </ul>

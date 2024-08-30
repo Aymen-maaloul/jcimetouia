@@ -4,21 +4,24 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-html{
+}
+
+html {
     scroll-behavior: smooth;
 }
-.logo{
+
+.logo {
     width: 160px;
     height: 160px;
     margin-left: 15%;
     margin-top: 0%;
 
 }
-#logo{
-        margin-left: 15%;
-        margin-top: 0%;
-    
+
+#logo {
+    margin-left: 15%;
+    margin-top: 0%;
+
 }
 
 .menu-icon {
@@ -32,293 +35,131 @@ html{
 
 
 
-a{
+a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 18px;
-    font-family: 'TT Chocolates Trl',sans-serif;
+    font-family: 'TT Chocolates Trl', sans-serif;
     font-weight: 500;
 }
-.first{
+
+.first {
     background-image: url("../public/assest/back.png");
     background-size: cover;
-  background-position: top;
-  height: 700px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+    background-position: top;
+    height: 700px;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
 header {
     width: 100%;
 }
 
-/* Navbar styling */
 nav {
     background-color: white;
     box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
     height: 100px;
     width: 100%;
     display: flex;
-    align-items: center; /* Center items vertically */
-    padding: 0 20px; /* Add padding for spacing */
-    position: fixed; /* Fix the navbar at the top */
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
     top: 0;
-    z-index: 1000; /* Ensure navbar is on top of other elements */
+    z-index: 1000;
 }
 
 
 
-/* Remove default list style and add margin between list items */
 .li {
     list-style: none;
-    margin-left: 30px; /* Adjusted margin */
+    margin-left: 30px;
 }
 
-/* Flexbox for ul to align items */
 .ul {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
-    margin-left: auto; /* Automatically take up the remaining space on the left */
-    margin-right: 200px; /* Add right margin to avoid overflow */
-    width: auto; /* Ensure ul doesn't expand unnecessarily */
+    margin-left: auto;
+    margin-right: 200px;
+    width: auto;
 }
-.homecontent{
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-     /* Full viewport height */
-    text-align: center; /* Center text */
+
+.homecontent {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 6%;
 }
-h1{
-    font-size:40px;
-    font-family: 'TT Chocolates Trl',sans-serif;
+
+h1 {
+    font-size: 40px;
+    font-family: 'TT Chocolates Trl', sans-serif;
     font-weight: 500;
     color: #ffffff;
 }
-.count{
+
+.count {
     font-size: 35px;
     font-weight: 400;
 }
-.h1{
+
+.h1 {
     padding-top: 7%;
-    font-size:45px;
+    font-size: 45px;
     font-weight: 600;
 }
-h2{
-    font-size:40px;
-    font-family: 'TT Chocolates Trl',sans-serif;
+
+h2 {
+    font-size: 40px;
+    font-family: 'TT Chocolates Trl', sans-serif;
     font-weight: 400;
     color: #EDBE38;
 }
-.counter{
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-     /* Full viewport height */
-    text-align: center; 
+
+.counter {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     display: flex;
-    flex-direction:row; /* Align items vertically */
-      gap: 40px;
+    flex-direction: row;
+    gap: 40px;
 }
 
-.btn1{
-margin-right: 1%;
-width: 147px;
-height: 41px;
-border-radius: 100px;
-background: none;
-border-color: #ffffff;
-border: 2px solid #ffffff;
-box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 0.5) /* Fully opaque */
-;
-}
-.btn1>a{
-    color: #ffffff;
-    font-weight: 500;
-}
-.btn2{
-margin-left: 1%;
-width: 147px;
-border-radius: 100px;
-border: none;
-background-color: black;
-box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
-
-height: 41px;
-}
-.icon{
-    margin-top: 2.5%;
-}
-.icon>a{
-    margin: 15px;
-}
-.btn2>a{
-    color: white;
-    font-weight: 500;
-}
-.join{
+.join {
     background-color: #0F7DFF;
-    width: 110px;
+    width: 160px;
     height: 37px;
     color: white;
-    font-family: 'TT Chocolates Trl',sans-serif;
+    font-family: 'TT Chocolates Trl', sans-serif;
     border-radius: 100px;
     box-shadow: 0 4px 8px rgba(3, 15, 125, 0.5);
     border: none;
 }
+
 .scroll {
-    font-size: 3rem; /* Adjust size as needed */
-    color: #56BDA3; /* Set the color of the icon */
-    animation: scroll-vertical 2s infinite; /* Apply continuous animation */
+    font-size: 3rem;
+    color: #56BDA3;
+    animation: scroll-vertical 2s infinite;
     margin-top: 0%;
-  }
-  
-  @keyframes scroll-vertical {
+}
+
+@keyframes scroll-vertical {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(20px); /* Move the icon down */
+        transform: translateY(20px);
     }
+
     100% {
-      transform: translateY(0); /* Return to original position */
+        transform: translateY(0);
     }
-  }
-
-
-
-
-
-
-
-  
-@media (max-width: 1024px) {
-    
 }
 
-/* Phones (max-width: 576px) */
-@media (max-width: 576px) {
-    .first{
-        background-image: url("../public/assest/backphone.png");
-    }
-    .logo{
-        width: 160px;
-        height: 160px;
-        margin-left: 0%;
-        margin-top: 0%;
-    
-    }
-    nav ul {
-        display: none; /* Hide the navigation links */
-        flex-direction: column;
-        width: 100%;
-    }
-    .ul{
-        margin-left: -65%;
-        margin-top: 70%;
-        background-color: #ffffff;
-        width: 100%;
-        height: 400px;
-        
-    }
-    .ul>li{
-        padding-left: 100%;
-        padding-right: 100%;
-        margin-bottom: 20px;
-        margin-left: 0%;
-    }
-    
-    .menu-icon {
-        display: block; 
-        color: black;/* Show the hamburger icon */
-    }
-
-    nav ul.show {
-        display: flex; /* Show the navigation links when triggered */
-    }
-    nav{
-        width:100%;
-    }
-    .h1{
-        font-size:28px;
-        width: 90%;
-        margin-left: 5%;
-        font-family: 'TT Chocolates Trl',sans-serif;
-        font-weight: 500;
-        color: #ffffff;
-        padding-top: 40%;
-        text-align: center;
-        font-weight: 600;
-    }
-    h2{
-        font-size:16px;
-        width: 80%;
-        margin-left: 8%;
-        font-family: 'TT Chocolates Trl',sans-serif;
-        font-weight: 500;
-        color: #EDBE38;
-    }
-    h3{
-        font-size:15px;
-        font-family: 'Saira ExtraCondensed',sans-serif;
-        font-weight: 500;
-        color: #4266B0;
-    }
-    .counter{
-        width: 50%;
-        margin-top: -5%;
-        align-items: center; /* Center horizontally */
-        justify-content: center; /* Center vertically */
-         /* Full viewport height */
-        text-align: center; 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction:row; /* Align items vertically */
-          gap: 25px;
-    }
-    .count{
-        font-size: 23px;
-        font-weight: 400;
-    }
-    .btn1{
-    margin-right: 1%;
-    margin-top: 5%;
-    width: 147px;
-    height: 41px;
-    border-radius: 100px;
-    background: none;
-    border-color: #ffffff;
-    border: 2px solid #ffffff;
-    box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 0.5) /* Fully opaque */
-    ;
-    }
-    .btn1>a{
-        color: #ffffff;
-        font-weight: 500;
-    }
-    .btn2{
-    margin-left: 1%;
-    width: 147px;
-    border-radius: 100px;
-    border: none;
-    background-color: black;
-    box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
-    
-    height: 41px;
-    }
-    .icon{
-        margin-top: 14%;
-    }
-    .icon>a{
-        margin: 15px;
-    }
-    .btn2>a{
-        color: white;
-        font-weight: 500;
-    }
-
-}
 .menu-icon {
     display: none;
     margin-left: 30%;
@@ -328,7 +169,6 @@ height: 41px;
     cursor: pointer;
 }
 
-/* Close button styles */
 .close-btn {
     display: none;
     font-size: 24px;
@@ -340,7 +180,6 @@ height: 41px;
     z-index: 1000;
 }
 
-/* Default desktop menu styles */
 .ul-desktop {
     display: flex;
     align-items: center;
@@ -351,7 +190,6 @@ height: 41px;
     margin-right: 200px;
 }
 
-/* Mobile menu, hidden by default */
 .ul-mobile {
     display: none;
     flex-direction: column;
@@ -363,69 +201,196 @@ height: 41px;
     left: 0;
     width: 100%;
     height: 50%;
-    
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     background-color: rgb(255, 255, 255);
     z-index: 1000;
     transition: 0.3s ease-in-out;
 }
-.ul-mobile>div{
+
+.ul-mobile>div {
     justify-content: center;
     display: flex;
     flex-direction: column;
     margin-left: -75%;
 }
-.ul-mobile>div>li{
+
+.ul-mobile>div>li {
     margin-bottom: 20px;
 }
-.ul-mobile>div>li>a{
+
+.ul-mobile>div>li>a {
     font-size: 25px;
     font-weight: 400;
     color: #717171;
 }
 
-/* Show the mobile menu when active */
 .nav-active {
     display: flex;
 }
 
-/* Show the close button when mobile menu is active */
 .nav-active .close-btn {
     display: block;
 }
 
 @media (max-width: 576px) {
-    /* Show the menu icon on mobile */
+    .first {
+        background-image: url("../public/assest/backphone.png");
+    }
+
+    .logo {
+        width: 160px;
+        height: 160px;
+        margin-left: 0%;
+        margin-top: 0%;
+
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ul {
+        margin-left: -65%;
+        margin-top: 70%;
+        background-color: #ffffff;
+        width: 100%;
+        height: 400px;
+
+    }
+
+    .ul>li {
+        padding-left: 100%;
+        padding-right: 100%;
+        margin-bottom: 20px;
+        margin-left: 0%;
+    }
+
+    .menu-icon {
+        display: block;
+        color: black;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .h1 {
+        font-size: 28px;
+        width: 90%;
+        margin-left: 5%;
+        font-family: 'TT Chocolates Trl', sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        padding-top: 40%;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 16px;
+        width: 80%;
+        margin-left: 8%;
+        font-family: 'TT Chocolates Trl', sans-serif;
+        font-weight: 500;
+        color: #EDBE38;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-family: 'Saira ExtraCondensed', sans-serif;
+        font-weight: 500;
+        color: #4266B0;
+    }
+
+    .counter {
+        width: 50%;
+        margin-top: -5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .count {
+        font-size: 23px;
+        font-weight: 400;
+    }
+
+    .btn1 {
+        margin-right: 1%;
+        margin-top: 5%;
+        width: 147px;
+        height: 41px;
+        border-radius: 100px;
+        background: none;
+        border-color: #ffffff;
+        border: 2px solid #ffffff;
+        box-shadow: 0px 2px 20px 0px rgba(255, 255, 255, 0.5)
+        ;
+    }
+
+    .btn1>a {
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .btn2 {
+        margin-left: 1%;
+        width: 147px;
+        border-radius: 100px;
+        border: none;
+        background-color: black;
+        box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+
+        height: 41px;
+    }
+
     .menu-icon {
         display: block;
         color: black;
         margin-top: 0%;
     }
-    .close-btn{
+
+    .close-btn {
         display: block;
         color: #000;
     }
-    /* Hide desktop menu on mobile */
+
     .ul-desktop {
         display: none;
     }
-    .close-btn{
+
+    .close-btn {
         font-size: 40px;
         margin-left: 200%;
         margin-top: -5%;
     }
-    .close{
-        margin-left: 200%;
+
+    .close {
+        margin-left: 180%;
         margin-top: -5%;
         width: 24px;
         height: auto;
     }
-    .join{        width: 225%;
+
+    .join {
+        width: 225%;
         height: 50px;
         font-size: 18px;
         margin-top: 30px;
     }
-    #logo{
+
+    #logo {
         margin-left: 2%;
         margin-top: 2%;
     }

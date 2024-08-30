@@ -1,6 +1,5 @@
 import React from 'react';
-import './aboutus.css'; // Assuming you have other styles here
-
+import './aboutus.css'; 
 const AboutUs = () => {
   return (
     <section id="AboutUs" className="aboutus">

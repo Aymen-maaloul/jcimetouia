@@ -1,6 +1,6 @@
-// VideoPlayer.js
+
 import React, { useRef, useEffect, useState } from 'react';
-import './events.css'; // Import your CSS file if needed
+import './events.css'; 
 
 const VideoPlayer = () => {
   const videoPlayerRef = useRef(null);
@@ -45,8 +45,8 @@ const VideoPlayer = () => {
 
   return (
     <div className='divevents'>
-      <video 
-        width="38%" // Adjust width as needed
+      <video
+        width="38%" 
         height="auto"
         ref={videoPlayerRef}
         poster="assest/rnp1.png"

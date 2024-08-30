@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Projects.css'; // Import your CSS file
+import './Projects.css'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -9,7 +9,7 @@ import UpgradeModal from './upgrademodal';
 import KeswetModal from './keswetmodal';
 
 const Projects = () => {
-  const [modalType, setModalType] = useState(null); // To keep track of which modal to show
+  const [modalType, setModalType] = useState(null); 
 
   const data = [
     { image: 'assest/iSpeak.png', type: 'iSpeak' },
@@ -43,11 +43,11 @@ const Projects = () => {
   };
 
   const handleImageClick = (type) => {
-    setModalType(type); // Set the type of modal to show
+    setModalType(type); 
   };
 
   const handleCloseModal = () => {
-    setModalType(null); // Close the modal
+    setModalType(null); 
   };
 
   return (

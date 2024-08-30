@@ -1,160 +1,150 @@
 .secproj {
-    overflow: hidden;
-    width: 100%; /* Optional padding for the section */
-  }
-  
-  .projtitle {
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    color: #C59C42;
-    text-decoration: underline;
-    font-weight: 400;
-    font-family: 'TT Chocolates Trl', sans-serif;
-  }
-  
-  .divproj {
-    width: 100%;
-    /* Hide any overflow from slider */
-    position: relative;
-  }
-  
-  /* Ensure slider container is centered */
+  overflow: hidden;
+  width: 100%;
+}
+
+.projtitle {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  color: #C59C42;
+  text-decoration: underline;
+  font-weight: 400;
+  font-family: 'TT Chocolates Trl', sans-serif;
+}
+
+.divproj {
+  width: 100%;
+  position: relative;
+}
+
+.slick-slider {
+  width: 90%;
+}
+
+.slide-item {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 55% !important;
+  height: 315px;
+  border-radius: 10px;
+  background-size: 100%;
+  background-position: center;
+  padding: 10px;
+  color: #C59C42;
+}
+
+.slide-item img {
+  width: 98%;
+  height: auto;
+  z-index: 1;
+  order: 1;
+  margin-top: 55px;
+  position: relative;
+  top: -60px;
+}
+
+.slide-item p {
+  font-size: 13px;
+  text-align: center;
+  width: 80%;
+}
+
+.navbtn {
+  background-color: #C59C42;
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 250px;
+  z-index: 10000;
+  justify-content: center;
+}
+
+.navbtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.slick-prev {
+  background-color: #C59C42 !important;
+  border: none;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  color: #C59C42 !important;
+  z-index: 1000;
+}
+
+.slick-next {
+  background-color: #C59C42 !important;
+  border: none;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  color: #C59C42 !important;
+  z-index: 1000;
+}
+
+.slick-prev {
+  left: 0px;
+}
+
+.slick-next {
+  right: 0px;
+}
+
+@media (max-width: 576px) {
+
   .slick-slider {
-    width: 90%;
+    margin-left: -18%;
+    width: 140%;
   }
-  
-  /* Style for each slide item */
-  .slide-item {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: space-between; /* Distribute space between content and button */
-    width: 55% !important; /* Fixed width for each slide */
-    height: 315px; /* Fixed height */
-    border-radius: 10px; /* Space between slides */
-    background-size: 100%; /* Ensure background covers entire div */
-    background-position: center; /* Center background image */
-    padding: 10px; /* Padding inside slide item */
-    color: #C59C42;  /* Fix box shadow */
-  }
-  
-  /* Ensure image width does not exceed slide width */
-  .slide-item img {
-    width: 98%; /* Fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 1;
-    order: 1;
-    margin-top: 55px;
-    position: relative;
-    top: -60px; 
-    /* Adjust top margin as needed */
-  }
-  
-  /* Text paragraph inside each slider item */
-  .slide-item p {
-    font-size: 13px; /* Adjust font size as needed */
-    text-align: center; /* Center text within the slide */
-    width: 80%; /* Adjust width as needed */
-  }
-  
-  /* Button inside each slider item */
-  .navbtn {
-    background-color: #C59C42;
-    width: 80%; 
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: 250px;
-    z-index: 10000;
-    justify-content: center;
-  }
-  
-  /* Link inside button */
-  .navbtn a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Slick navigation buttons */
-  .slick-prev{
-    background-color: #C59C42 !important;
-    border: none;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    color: #C59C42 !important;
-    z-index: 1000;
-  }
-  .slick-next{
-    background-color: #C59C42 !important;
-    border: none;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    color: #C59C42 !important;
-    z-index: 1000;
-  }
-  
+
   .slick-prev {
     left: 0px;
+    display: none;
   }
-  
+
   .slick-next {
-    right: 0px;
+    right: 250px;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 576px) {
-    .secproj {
-    }
-    .slick-slider{
-      margin-left: -18%;
-      width: 140%;
-    }
-    .slick-prev {
-        left: 0px;
-        display: none;
-      }
-      
-      .slick-next {
-        right: 250px;
-      }
-  
-  /* Ensure image width does not exceed slide width */
+
   .slide-item img {
-    width: 98%; /* Fixed width for the image */
-    height: auto; /* Maintain aspect ratio */
+    width: 98%;
+    height: auto;
     z-index: 1;
     order: 1;
     margin-top: 55px;
     position: relative;
-    top: -60px; 
-    /* Adjust top margin as needed */
+    top: -60px;
   }
-  .projtitle{
-    
-        font-size: 28px;
-        text-decoration: none;
-      
+
+  .projtitle {
+
+    font-size: 28px;
+    text-decoration: none;
+
   }
-    .divproj {
-      width: 100%; /* Full width on small screens */
-    }
-  
-    .slide-item {
-      width: 100%; /* Full width on small screens */
-      height: auto; /* Adjust height */
-    }
-  
-    .slide-item p {
-      font-size: 12px;
-    }
-   
+
+  .divproj {
+    width: 100%;
   }
-  
+
+  .slide-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .slide-item p {
+    font-size: 12px;
+  }
+
+}
