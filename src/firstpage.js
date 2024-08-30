@@ -67,7 +67,7 @@ const Home = () => {
               </h1>
             </div>
             <div>
-              <h1 className='count'>
+              <h1 id="count" className='count'>
                 +<CountUp start={0} end={32} /> <br /> Formations
               </h1>
             </div>
