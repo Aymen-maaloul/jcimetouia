@@ -19,7 +19,9 @@ const Home = () => {
     <section className='first'>
       <header>
         <nav>
-          <img src="/assest/jci.png" alt="Logo" className="logo" />
+        <a href='http://jcimetouia.tn/' id='logo'>
+                <img src="./assest/jci.png" alt="Logo" class="logo" />
+            </a>
           <span className="menu-icon" onClick={toggleMenu}>&#9776;</span>
 
           <ul className={`ul-desktop ${isMenuActive ? 'nav-active' : ''}`}>
@@ -50,18 +52,18 @@ const Home = () => {
       </header>
 
       <div className="homecontent">
-        <h1 className='h1'>The Junior Chamber International of Tunisia</h1>
-        <h2>Developing leaders for a changing world</h2>
+        <h1 className='h1'>La Jeune Chambre Internationale de Metouia</h1>
+        <h2>Former des leaders pour un monde en mutation</h2>
         <center>
           <div className='counter'>
             <div>
               <h1 className='count'>
-                +<CountUp start={0} end={6} /> <br /> Projects
+                +<CountUp start={0} end={6} /> <br /> Projets
               </h1>
             </div>
             <div>
               <h1 className='count'>
-                +<CountUp start={0} end={73} /> <br /> Members
+                +<CountUp start={0} end={73} /> <br /> Membres
               </h1>
             </div>
             <div>

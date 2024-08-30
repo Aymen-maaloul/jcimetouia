@@ -15,6 +15,11 @@ html{
     margin-top: 0%;
 
 }
+#logo{
+        margin-left: 15%;
+        margin-top: 0%;
+    
+}
 
 .menu-icon {
     display: none;
@@ -374,7 +379,7 @@ height: 41px;
     margin-bottom: 20px;
 }
 .ul-mobile>div>li>a{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
     color: #717171;
 }
@@ -410,7 +415,7 @@ height: 41px;
         margin-top: -5%;
     }
     .close{
-        margin-left: 180%;
+        margin-left: 200%;
         margin-top: -5%;
         width: 24px;
         height: auto;
