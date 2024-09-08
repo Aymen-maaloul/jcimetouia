@@ -318,7 +318,7 @@ h2 {
         display: grid;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 55px;
+        gap: 5px;
     }
 
     .count {
