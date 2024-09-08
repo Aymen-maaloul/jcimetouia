@@ -315,10 +315,10 @@ h2 {
         align-items: center;
         justify-content: center;
         text-align: center;
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 155px;
+        gap: 55px;
     }
 
     .count {
