@@ -26,7 +26,7 @@ const Home = () => {
 
           <ul className={`ul-desktop ${isMenuActive ? 'nav-active' : ''}`}>
             <li className='li'><a href="#AboutUs">À propos</a></li>
-            <li className='li'><a href="#events">Évènements</a></li>
+            <li className='li'><a href="#events">Évènement</a></li>
             <li className='li'><a href="#projects">Projets</a></li>
             <li className='li'><a href="#partners">Partenaires</a></li>
             <li className='li'>
@@ -40,7 +40,7 @@ const Home = () => {
             <div>
               <img className="close" onClick={closeMenu} src='assest/fermer (1).png'></img>
               <li className='li'><a href="#AboutUs">À propos</a></li>
-              <li className='li'><a href="#events">Évènements</a></li>
+              <li className='li'><a href="#events">Événements</a></li>
               <li className='li'><a href="#projects">Projets</a></li>
               <li className='li'><a href="#partners">Partenaires</a></li>
               <li className='li'>
@@ -67,7 +67,7 @@ const Home = () => {
               </h1>
             </div>
             <div>
-              <h1 id="count" className='count'>
+              <h1 className='count'>
                 +<CountUp start={0} end={32} /> <br /> Formations
               </h1>
             </div>
